@@ -6,6 +6,7 @@ module Spree
       payment_method = Spree::PaymentMethod.find(params[:payment_method_id])
       order = current_order
       @param_list = Hash.new
+      @param_list['CALLBACK_URL'] = "#{request.base_url}/paytm/confirm" 
       @param_list['MID'] = payment_method.preferred_merchant_id
       @param_list['INDUSTRY_TYPE_ID'] = payment_method.preferred_industry_type_id
       @param_list['CHANNEL_ID'] = payment_method.preferred_channel_id
@@ -33,7 +34,7 @@ module Spree
     end
 
     def confirm
-      payment_method = Spree::PaymentMethod.find_by(type: Spree::Gateway::Paytm)
+      payment_method = Spree::PaymentMethod.find_by(type: Spree::Gateway::Paytm.to_s)
       checksum_hash = params["CHECKSUMHASH"]
       params.delete("CHECKSUMHASH")
       @status = params["STATUS"]
