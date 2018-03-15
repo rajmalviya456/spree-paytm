@@ -3,7 +3,7 @@ Paytm payment gateway integration for spree
 
 For live demo please [click here](http://spree-paytm-demo.herokuapp.com/)
 
-You can also look at demo source code at [https://github.com/monika-khatri/spree-paytm-demo](https://github.com/monika-khatri/spree-paytm-demo)
+You can also look at demo source code at [https://github.com/parassaini/spree-paytm-demo](https://github.com/parassaini/spree-paytm-demo)
 
 
 ## Installation
