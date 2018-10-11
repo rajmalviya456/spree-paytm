@@ -43,7 +43,7 @@ module Spree
     end
 
     def txn_url
-      'https://' + domain + '/oltp-web/processTransaction'
+      'https://' + domain + '/theia/processTransaction'
     end
 
     def request_type
@@ -249,11 +249,7 @@ module Spree
 
     private
     def domain
-      domain = 'secure.paytm.in'
-      if (preferred_test_mode == true)
-        domain = 'pguat.paytm.com'
-      end
-      domain
+      preferred_test_mode == true ? 'securegw-stage.paytm.in' : 'securegw.paytm.in'
     end
   end
 end
