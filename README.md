@@ -7,7 +7,7 @@ You can also look at demo source code at [https://github.com/parassaini/spree-pa
 
 1. Add this extension to your Gemfile with this line:
 
-        gem 'spree_paytm', :github => 'paras-saini/spree-paytm'
+        gem 'spree_paytm', :github => 'parassaini/spree-paytm'
 
 2. Install the gem using Bundler:
 
