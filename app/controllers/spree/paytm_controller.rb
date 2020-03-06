@@ -27,7 +27,7 @@ module Spree
         @param_list['MOBILE_NO'] = phone
         @param_list['EMAIL'] = order.email
 
-        checksum = payment_method.new_pg_checksum(@param_list)
+        checksum = payment_method.new_pg_checksum(@param_list).gsub("\n", '')
         @param_list['CHECKSUMHASH'] = checksum
         @paytm_txn_url = payment_method.txn_url
       end
