@@ -63,10 +63,10 @@ module Spree
       else
         @payment.state = 'failed'
         @payment.save
-        @order.update_attributes(payment_state: 'failed')
+        @order.update(payment_state: 'failed')
         @error = true
         @message = 'There was an error processing your payment'
-        flash.error = @message
+        flash[:error] = @message
         @redirect_path = checkout_state_path(@order.state)
       end
       redirect_to @redirect_path
