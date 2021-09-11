@@ -1,8 +1,6 @@
 # spree_paytm
 Paytm payment gateway integration for spree
 
-You can also look at demo source code at [https://github.com/parassaini/spree-paytm-demo](https://github.com/parassaini/spree-paytm-demo)
-
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
@@ -23,4 +21,4 @@ You can also look at demo source code at [https://github.com/parassaini/spree-pa
 
         Spree::Gateway::Paytm
 
-6. Set all credentials from your paytm sandbox account. If you don't have it you can use from [Paytm Discussion Forum](http://paywithpaytm.com/developer/discussion/topic/sandbox-test-credentials-for-testing-paytm-solutions/)
+6. Set all credentials from your paytm sandbox account.
