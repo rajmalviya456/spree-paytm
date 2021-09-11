@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'rake'
 require 'rake/testtask'
@@ -19,12 +21,11 @@ RSpec::Core::RakeTask.new(:spec) do |t|
   t.fail_on_error = false
 end
 
-desc "Run RSpec with code coverage"
+desc 'Run RSpec with code coverage'
 task :coverage do
   ENV['COVERAGE'] = 'true'
-  Rake::Task["spec"].execute
+  Rake::Task['spec'].execute
 end
-task :default => 'rspec-rerun:spec'
-
+task default: 'rspec-rerun:spec'
 
 Bundler::GemHelper.install_tasks

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSpreePaytmCheckouts < ActiveRecord::Migration[4.2]
   def change
     create_table :spree_paytm_checkouts do |t|
